@@ -9,10 +9,12 @@ export const slotMachine =()=>{
     const num1=(Math.floor(Math.random() * 3))
     const num2=(Math.floor(Math.random() * 3))
     const num3=(Math.floor(Math.random() * 3))
-    if (num1 == num2 && num2== num3) {
-        console.log("Bingo");
-        
-    }
-    return(`${num1},${num2},${num3}`);
     
+    if (num1 == num2 && num2== num3) {
+        
+        return ({"chance" : true,"bonous":num1+1});
+    }
+    
+    return false;
+  
 }

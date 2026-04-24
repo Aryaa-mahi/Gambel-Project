@@ -20,9 +20,11 @@ const gambelSchema = new mongoose.Schema({
       required : true,
   },
   status :{
-    type : Boolean,
+    type : String,
   },
-  
+  method :{
+    type : String,
+  }
 });
 
 // Model
