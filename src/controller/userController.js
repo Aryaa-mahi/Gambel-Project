@@ -1,4 +1,3 @@
-
 import { User } from "../models/userModel.js";
 import { uid_generator } from "../util/idGenerator.js";
 
@@ -6,7 +5,7 @@ export const userRegister= async(req,res)=>{
     const {name,password,email} = req.body;
     if(!name && !password && !email){
        res.send("All input requires.");
-    }
+    } 
     const newUser = await User.insertOne({
         "name":name,
         "password":password,
@@ -31,4 +30,13 @@ export const userLogin = async(req,res)=>{
         res.send("User not found");
     }
     res.send("User login successful")
+}
+export const leaderboard = async(req,res)=>{
+   const allUsers = await User.find({}).select("name coin")
+   .sort({
+    coin : -1,
+   })
+  
+ res.send(allUsers);  
+
 }
