@@ -16,6 +16,7 @@
     "mogoose": "^0.0.1-security",
     "mongoose": "^9.4.1",
     "nodemon": "^3.1.14",
+    "razorpay": "^2.9.6",
     "uuid": "^13.0.0",
     "zod": "^4.3.6"
   }

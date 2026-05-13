@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { required } from "zod/mini";
 
 // Schema
 const investSchema = new mongoose.Schema({
@@ -18,13 +19,13 @@ const investSchema = new mongoose.Schema({
       type: String,
       required : true,
   },
-  verifyed :{
-    type : Boolean,
+  status:{
+    type :String,
   },
-  coin :{
-    type : Number,   //-> coins or tokens 
-    required : false,
-  },
+  intrest:{
+    type :Number,
+    required: true,
+  }
 });
 
 // Model
